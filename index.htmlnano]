@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="card">
-        <!-- Foto Profil Asli -->
         <img src="foto.jpg" alt="Foto Profil" class="profile-img">
         
         <h1>Halo Dunia! 👋</h1>
@@ -16,6 +15,14 @@
         <p class="role">Ubuntu & Web Development Learner</p>
         <p>Website pertamaku yang dibuat langsung di Ubuntu menggunakan terminal, terhubung dengan CSS terpisah, dan kini tampil makin keren.</p>
         
+        <!-- Bagian Kotak Keahlian (Skills) -->
+        <div class="skills-container">
+            <span class="skill-badge">Ubuntu</span>
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">Git</span>
+        </div>
+
         <a href="https://github.com/tiararahmayanti75-eng" target="_blank" class="btn">Kunjungi GitHub Saya</a>
     </div>
 </body>
