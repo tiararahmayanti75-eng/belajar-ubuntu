@@ -52,6 +52,15 @@ p {
     font-size: 14px;
     color: #4b5563;
     line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Gaya teks khusus untuk Tentang Saya */
+.about-text {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+    text-align: left;
     margin-bottom: 20px;
 }
 
@@ -85,12 +94,12 @@ p {
     border: 1px solid #bfdbfe;
 }
 
-/* Proyek (Projects) */
+/* Proyek & Pencapaian (Projects & Achievements) */
 .projects-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .project-card {
