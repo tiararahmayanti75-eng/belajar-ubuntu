@@ -1,3 +1,17 @@
+/* ===========================
+   ANIMASI HALUS (FADE-IN)
+   =========================== */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
     background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,6 +34,7 @@ body {
     width: 100%;
     position: relative;
     transition: background 0.3s ease, color 0.3s ease;
+    animation: slideUp 0.8s ease-out forwards;
 }
 
 /* Tombol Pengalih Dark Mode */
@@ -163,23 +178,29 @@ p, .about-text {
     box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
 }
 
+/* Ikon Sosial Media Minimalis */
 .social-links {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-.social-link {
-    font-size: 13px;
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f1f5f9;
     color: #64748b;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
-.social-link:hover {
-    color: #2563eb;
-    text-decoration: underline;
+.social-icon:hover {
+    background-color: #2563eb;
+    color: white;
+    transform: translateY(-2px);
 }
 
 /* ===========================
@@ -203,8 +224,7 @@ body.dark-mode .section-title {
 body.dark-mode p, 
 body.dark-mode .about-text, 
 body.dark-mode .project-card p, 
-body.dark-mode .role, 
-body.dark-mode .social-link {
+body.dark-mode .role {
     color: #94a3b8;
 }
 
@@ -226,4 +246,15 @@ body.dark-mode .skill-badge {
     background-color: #172554;
     color: #60a5fa;
     border-color: #1e40af;
+}
+
+body.dark-mode .social-icon {
+    background-color: #1e293b;
+    color: #94a3b8;
+    border: 1px solid #334155;
+}
+
+body.dark-mode .social-icon:hover {
+    background-color: #2563eb;
+    color: white;
 }
