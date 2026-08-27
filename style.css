@@ -7,6 +7,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 20px;
+    transition: background 0.3s ease;
 }
 
 .card {
@@ -17,6 +18,27 @@ body {
     text-align: center;
     max-width: 450px;
     width: 100%;
+    position: relative;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Tombol Pengalih Dark Mode */
+.dark-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #e2e8f0;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dark-toggle:hover {
+    background: #cbd5e1;
 }
 
 .profile-img {
@@ -48,23 +70,18 @@ h2 {
     margin-bottom: 15px;
 }
 
-p {
-    font-size: 14px;
-    color: #4b5563;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Gaya teks khusus untuk Tentang Saya */
-.about-text {
+p, .about-text {
     font-size: 14px;
     color: #4b5563;
     line-height: 1.6;
     text-align: left;
+    margin-bottom: 15px;
+}
+
+.about-text {
     margin-bottom: 20px;
 }
 
-/* Judul Bagian Kecil */
 .section-title {
     font-size: 15px;
     font-weight: bold;
@@ -75,7 +92,6 @@ p {
     padding-left: 8px;
 }
 
-/* Keahlian (Skills) */
 .skills-container {
     display: flex;
     justify-content: flex-start;
@@ -94,7 +110,6 @@ p {
     border: 1px solid #bfdbfe;
 }
 
-/* Proyek & Pencapaian (Projects & Achievements) */
 .projects-container {
     display: flex;
     flex-direction: column;
@@ -129,7 +144,6 @@ p {
     margin: 0;
 }
 
-/* Tombol Utama */
 .btn {
     display: block;
     background-color: #2563eb;
@@ -149,7 +163,6 @@ p {
     box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
 }
 
-/* Tautan Sosial Media Tambahan */
 .social-links {
     display: flex;
     justify-content: center;
@@ -167,4 +180,50 @@ p {
 .social-link:hover {
     color: #2563eb;
     text-decoration: underline;
+}
+
+/* ===========================
+   PENGATURAN MODE GELAP (DARK MODE)
+   =========================== */
+body.dark-mode {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+body.dark-mode .card {
+    background: #1e293b;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode h1, 
+body.dark-mode .project-card h3, 
+body.dark-mode .section-title {
+    color: #f8fafc;
+}
+
+body.dark-mode p, 
+body.dark-mode .about-text, 
+body.dark-mode .project-card p, 
+body.dark-mode .role, 
+body.dark-mode .social-link {
+    color: #94a3b8;
+}
+
+body.dark-mode .project-card {
+    background-color: #0f172a;
+    border-color: #334155;
+}
+
+body.dark-mode .dark-toggle {
+    background: #334155;
+    color: #f8fafc;
+}
+
+body.dark-mode .dark-toggle:hover {
+    background: #475569;
+}
+
+body.dark-mode .skill-badge {
+    background-color: #172554;
+    color: #60a5fa;
+    border-color: #1e40af;
 }

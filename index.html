@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="card">
+        <!-- Tombol Dark Mode Sederhana -->
+        <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Mode Gelap</button>
+
         <!-- Foto Profil -->
         <img src="foto.jpg" alt="Foto Profil" class="profile-img">
         
@@ -67,5 +70,12 @@
             <a href="https://instagram.com" target="_blank" class="social-link">Instagram</a>
         </div>
     </div>
+
+    <!-- Skrip JavaScript Sederhana untuk Dark Mode -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
